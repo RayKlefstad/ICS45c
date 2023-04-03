@@ -74,20 +74,20 @@ Once you have set up your `username`, `email`, and `ssh key`, you will need to
 repository. To fork the repository, you will clink the `fork` button at the top right of the `GitHub`
 page highlighted below:
 
-![Fork Highlight](docs/fork_highlighted)
+![](docs/fork_highlighted.png)
 
 This will bring up another page which will allow you to select your personal `GitHub` account that
 you created and make your own copy of this repository. NOTE: It is very important that you make sure
 the checkbox for `Copy the main branch only` is NOT selected. We want to make a copy of ALL the
 branches!
 
-![Fork Page](docs/fork_page)
+![](docs/fork_page.png)
 
 After forking the repository, you will need to [clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
 the repository. On `Mac` and `Linux`, you can clone a repository by opening your `terminal` application
 using `git clone` and copy-pasting the URL you got from the green `Code` button above. Example below:
 
-![Clone Repository](docs/clone_link)
+![](docs/clone_link.png)
 
 ```bash
 git clone git@github.com:<YourUserName>/<YourProjectName>.git
