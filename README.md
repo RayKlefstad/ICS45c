@@ -170,6 +170,44 @@ you can check out the following sections for [CMake](#cmake) and [GTest](#gtest)
 sections are not required for this class but may be interesting if you want to more about C++ build systems
 and testing.
 
+## Submission
+
+All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
+and select `HW0`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
+instructions, otherwise follow the [Folder Submission](#folder-submission) instructions.
+
+### GitHub Submission
+
+First, we need to make sure that we commit all of our changes we made! In a terminal inside your project folder,
+run the following command:
+
+```bash
+git commit -a -m "Submission commit of HW0."
+```
+
+Now that we have committed out changes, we need to push them to `GitHub` so that `Gradescope` can see them.
+
+```bash
+git push
+```
+
+Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
+as shown below:
+
+![](docs/submit_github.png)
+
+Now the autograder will run and give you a score!
+
+### Folder Submission
+
+On `Gradescope`, press the `submit` button and it will bring up the following window:
+
+![](docs/submit_files.png)
+
+Then you will drag and drop the `hw0` folder that you created in the [Directory Structure](#directory-structure)
+section above. DO NOT `zip` this folder, and make sure your `hw0` folder is exactly the same as described above.
+Failure to do so will likely result in a 0 for the assignment until you fix it.
+
 ## CMake
 
 CMake is an industry standard for building C/C++ projects, and is used for making managing and building
