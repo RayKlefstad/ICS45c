@@ -6,6 +6,12 @@ class. This `main` branch will explain all the instructions you need to copy thi
 finally how to submit! If you want any further in depth instructions on any of the more advanced topics
 such as `CMake`, there will be a branch with more information that you can take a look at!
 
+NOTE : Each `branch` will have more specific instructions for each homework. This is a general
+set of instructions that apply to all assignments. If you want specific instructions, select
+the branch for the homework you are working on above.
+
+![](docs/branches.png)
+
 NOTE : Several instructions will use `<YourVersionHere>`, which means to replace it with your
 version of the item described between the `<>`. For example, `<YourNameHere>` could be replaced
 with `RayKlefstad`.
@@ -17,7 +23,7 @@ To get started, we will either need to make a [GitHub account](https://docs.gith
 titled `hw<#>` on your computer and follow the [Directory Structure](#directory-structure) shown below.
 
 Once you have a `GitHub` account, follow the instructions under the [GitHub](#github) section! If you choose
-not to use `GitHub`, skip to the [Coding](#coding) section.
+not to use `GitHub`, skip to the [Building](#building) section.
 
 ## Directory Structure
 
@@ -89,61 +95,31 @@ using `git clone` and copy-pasting the URL you got from the green `Code` button 
 
 ![](docs/clone_link.png)
 
+And then in the terminal, type:
+
 ```bash
 git clone git@github.com:<YourUserName>/<YourProjectName>.git
 ```
 
 This will add a folder to wherever you are currently working with the same name as `<YourProjectName>`.
-While you could start working here immediately, it is usually best practice to work in a "development"
-branch, and merge your changes into the `main` branch later. So, first, we need to change directory (`cd`)
-into our repository. Second, we will create a `dev` branch for us to work in.
+Now, to work in a specific homework, you will need to `checkout` the branch of the homework number you
+are working on. For example, if you want to work on `Homework 0`, you will `checkout` the branch `hw0`
+in the terminal as shown below:
 
 ```bash
-cd <YourProjectName>  # Change directory into your project folder
-git branch dev
+git checkout hw0
 ```
 
-This creates a branch called `dev`. This branch will contain all of the same files and folders your
-current branch has. Next we need to `checkout` this branch (which means we switch to the branch we
-just created).
+We are not in the `hw0` branch! You can now make changes to the files in the `src` folder!
+All changes for each homework should be made in the branch with the name of the homework in question.
+When you submit your homework, you will be selecting that branch. For instructions on making changes,
+check out the course's instructions for using `vim`/`neovim`. After making changes to the files, we will want to `commit`
+those changes. `Committing` a change adds it to the history of changes and allows `git` to track it.
 
 ```bash
-git checkout dev
-```
-
-Now we are on our `dev` branch! This branch has been added locally, but is not accessible on `GitHub`.
-This is because we need to `push` this branch to `GitHub` to let it know it exists and that we have
-changed our project. To do this, we will use the `git push` command. You only need to use the option
-`--set-upstream origin <BranchName>` the first time, as this will tell `GitHub` that you have made
-a new branch you want it to keep track of.
-
-```bash
-git push --set-upstream origin <BranchName> # Our <BranchName> should be dev for this example.
-```
-
-You can now safely add folders, files, and code! Whenever we add new files
-or folders, we will need to `add` them to `git`. As an example, lets add an `addtwo.h` file in the `src`
-folder and then `add` it to our project's tracked files in `git`.
-
-```bash
-cd src                # Change directory into `src` folder
-touch addtwo.h        # On Mac and Linux, this will create a file named `addtwo.h`. You can edit this file either with nvim, vim, or vscode.
-cd ../                # Change directory to the `parent` of my current folder (which should be your project directory).
-git add src/addtwo.h  # This adds the file addtwo.h to the files git will track changes for.
-```
-
-Now that we have added the new file, we can check the status of any new or changed files using `git status`:
-
-```bash
-git status            # This will print out a list of changes as well as any untracked files you have
-```
-
-When you are ready to make your changes more final, you will `commit` your changes. With commits, you
-can choose which files to commit as well as adding a message for what changes you have made. To keep this
-process simple, an example is provided for committing all changes with a simple message:
-
-```bash
-git commit -a -m "Added new file addtwo.h."
+# The -a option means to commit all pending changes
+# The -m option means to include a message
+git commit -a -m "Committing changes to file x."
 ```
 
 Now you have set all of your changes on your computer's `copy` of the project. In order for this copy
@@ -162,41 +138,37 @@ will copy any changes made to the code to your local copy on your computer:
 git pull
 ```
 
-Pulling code from `GitHub` will `merge` the changes made on the online version with the copy you have
-on your local computer. Merging also allows you to copy the changes you have made on one branch to another.
-We can test this by merging the changes we made to `dev` with the `main` branch. First we will change
-back to our main branch, then we will `merge` the changes from our `dev` branch:
-
-```bash
-git checkout main     # Switch to the `main` branch
-git merge dev         # Merge changes from `dev` into `current` branch
-```
-
-Now your `main` branch will be the same as your `dev` branch! If there are changes that disagree with
-each other then you will need to solve [merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
-but this is a more advanced topic and unlikely to happen in a single programmer single branch situation.
-
-
-
 ## Build Instructions
 
-To build and run your program, use the following commands:
+To build and run your program, you will need to open a terminal and move into the folder with your
+project in it. For example:
 
 ```bash
-mkdir build           # Makes a folder named `build`
-cd build              # Changes directory into `build` folder
-cmake ../             # Runs `CMake` to produce build files for your project
-make                  # Will build all of the `targets` described in the `CMake` file
-
-# This folder will now contain two executable files that you can run:
-./hw                  # Runs the `main` function from src/main.cpp
-./gtest               # Runs the tests you wrote in `gtest/tests.cpp`
+cd <YourProjectName>    # So if we had the project in a folder named Projects: cd Projects/CS45C-Template
 ```
 
-For more information on the [cmake](#cmake) step, reference the section below. For more information
-on [gtest](#gtest-1), either check the section below or reference the [primer](https://google.github.io/googletest/primer.html).
+Once you are in the project folder, use the following commands to build and then run your project:
+
+```bash
+cmake -B build        # Create a folder named `build` and run `CMake` to produce build files there
+cmake --build build   # Will build all of the `targets` described in the `CMake` file
+
+# The build folder will now contain two executable files that you can run:
+./build/hw            # Runs the `main` function from src/main.cpp
+./build/gtest         # Runs the tests you wrote in `gtest/tests.cpp`
+```
+
+You should never need to modify the `CMakeLists.txt` file, but if you are interested, you can reference
+the [cmake](#cmake) the section below. For more information
+on [gtest](#gtest), either check the section below or reference the [primer](https://google.github.io/googletest/primer.html).
 GTest will only build if you have it installed on your system. If you do not want to install it
 on your computer, you can use the OpenLab computers as it is installed there.
+
+The general instructions end here! You can now either switch to the branch for the homework you plan to
+work on for instructions specific to that homework, or if you are interested in some extra information
+you can check out the following sections for [CMake](#cmake) and [GTest](#gtest). Understanding those
+sections are not required for this class but may be interesting if you want to more about C++ build systems
+and testing.
 
 ## CMake
 
@@ -204,13 +176,10 @@ CMake is an industry standard for building C/C++ projects, and is used for makin
 large code bases manageable. Learning about CMake is likely to be useful to you if you ever work with
 C/C++ code. For this class, we will keep the CMakeLists.txt file as simple as possible, but you will be
 required to make minor changes to it. These changes will be required whenever we add new `.cpp` files
-to the project. Following the example from the [GitHub](#github) section, we will add a file named
-`addtwo.cpp` to implement the functions described in `addtwo.h`.
+to the project. We will add a file named `addtwo.cpp` to implement the functions described in `addtwo.h`.
 
 ```bash
-# If you did not add it before, add the `addtwo.h` file now.
 touch src/addtwo.h    # Adds the .h file
-
 touch src/addtwo.cpp  # Adds the .cpp file
 ```
 
