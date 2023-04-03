@@ -64,7 +64,31 @@ follow this structure, it is HIGHLY LIKELY your code will not work on Gradescope
 
 ## Coding
 
+We will run the text editor `vim` (or `neovim` if you prefer) on the file `src/main.cpp`:
 
+```bash
+# To use vim, type this command:
+vim src/main.cpp
+
+# To use neovim, type this command:
+nvim src/main.cpp
+```
+
+Once you are in `vim`/`nvim`, you will enter `insert` mode by pressing `i`. Then type the following program
+and press `Esc` when you are done.
+
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello World!" << endl;
+  return 0;
+}
+```
+
+Ensure that you have left `insert` mode by pressing `Esc`, then `write` and `quit` `vim` by typing either
+`:wq` or `:x`. This should close `vim`/`nvim` with your changes made. Now, you can move on to
+[Build Instructions](#build_instructions)!
 
 ## Build Instructions
 
@@ -120,4 +144,38 @@ Congratulations! You are now ready to [submit](#submission) your homework!
 
 ## Submission
 
+All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
+and select `HW0`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
+instructions, otherwise follow the [Folder Submission](#folder-submission) instructions.
 
+### GitHub Submission
+
+First, we need to make sure that we commit all of our changes we made! In a terminal inside your project folder,
+run the following command:
+
+```bash
+git commit -a -m "Submission commit of HW0."
+```
+
+Now that we have committed out changes, we need to push them to `GitHub` so that `Gradescope` can see them.
+
+```bash
+git push
+```
+
+Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
+as shown below:
+
+![](docs/submit_github.png)
+
+Now the autograder will run and give you a score!
+
+### Folder Submission
+
+On `Gradescope`, press the `submit` button and it will bring up the following window:
+
+![](docs/submit_files.png)
+
+Then you will drag and drop the `hw0` folder that you created in the [Directory Structure](#directory-structure)
+section above. DO NOT `zip` this folder, and make sure your `hw0` folder is exactly the same as described above.
+Failure to do so will likely result in a 0 for the assignment until you fix it.
