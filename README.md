@@ -119,7 +119,9 @@ This should output the following message to your terminal:
 Hello World!
 ```
 
-Next, we will run `GTest`. This will run tests on your code and is also how we will be grading your assignments:
+Next, we will run `GTest`. This will run tests on your code and is also how we will be grading your assignments.
+If you are not on OpenLab or have not installed `GTest` on your computer you are testing on, then skip this step
+and move on to [Submission](#submission).
 
 ```bash
 ./build/gtest         # Runs the tests you wrote in `gtest/tests.cpp`
