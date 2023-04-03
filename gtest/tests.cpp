@@ -11,6 +11,11 @@
 #include <gtest/gtest.h>
 
 namespace {
+
+TEST(Hello, World) {
+  EXPECT_TRUE(true);
+}
+
 // ADD YOUR TESTS HERE:
 
 
