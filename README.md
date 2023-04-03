@@ -59,8 +59,7 @@ If you are not using `GitHub`, you will need to make a folder named `hw0` with t
 
 You should copy everything from the CMakeLists.txt file into your own, as well as the files `gtestmain.cpp`
 and `tests.cpp`. This will allow you to build and run the tests for this assignment. If you do not
-follow this structure, it is HIGHLY LIKELY your code will not work on Gradescope and you will receive a
-0 for the assignment!
+follow this structure, you will not be able to use the `CMakeLists.txt` file as provided!
 
 ## Coding
 
@@ -178,6 +177,5 @@ On `Gradescope`, press the `submit` button and it will bring up the following wi
 
 ![](docs/submit_files.png)
 
-Then you will drag and drop the `hw0` folder that you created in the [Directory Structure](#directory-structure)
-section above. DO NOT `zip` this folder, and make sure your `hw0` folder is exactly the same as described above.
-Failure to do so will likely result in a 0 for the assignment until you fix it.
+Then you will drag and drop the `main.cpp` file from your `src` folder and press upload. As this is the only
+file we are changing, it should be the only file that you upload!
