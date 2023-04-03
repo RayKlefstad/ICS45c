@@ -8,7 +8,7 @@ such as `CMake`, there will be a branch with more information that you can take 
 
 NOTE : Several instructions will use `<YourVersionHere>`, which means to replace it with your
 version of the item described between the `<>`. For example, `<YourNameHere>` could be replaced
-with `RayKelfstad`.
+with `RayKlefstad`.
 
 ## Getting Started
 
@@ -47,15 +47,50 @@ GitHub is an online storage service for the tool `git`. `git` is used for saving
 code and allows multiple people to make changes to the same code base and keep track of all the
 different changes made at once. It also allows you to make multiple versions (or branches) so that
 you can try out different approaches or changes without breaking what you were working on before.
-To get started, you will need to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository)
-this repository following the instructions in the [link](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository).
+
+To get started, you will need to make sure that you have `git` installed on the computer or system
+you are working on (if you are working on OpenLab, it is already installed). To install `git` on
+your computer, follow the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+Once you have `git` installed, we will want to set up our basic configuration for it. On `Linux` and
+`Mac` (OpenLab is Linux), you can simply open a terminal, and on `Windows` you will open the `Git BASH`
+terminal you installed in the previous step. Once inside the terminal, you will be adding your
+`username` and your `email`.
+
+```bash
+git config --global user.name "<YourNameHere>"    # Example: "Ray Klefstad"
+git config --global user.email "<YourEmailHere>"  # Example: "klefstad@uci.edu"
+```
+
+We will also set up an `ssh` key as `GitHub` is moving away from allowing the usage of `https`
+links. Please first take a look at [this page](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+which explains how to make an `ssh` key and then either follow the instructions there (it will
+have instructions for Linux, Mac, and Windows). After you create your key, you will need to add
+it to `GitHub`, you can do that by following 
+[these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+Once you have set up your `username`, `email`, and `ssh key`, you will need to
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) this
+repository. To fork the repository, you will clink the `fork` button at the top right of the `GitHub`
+page highlighted below:
+
+![Fork Highlight](docs/fork_highlighted)
+
+This will bring up another page which will allow you to select your personal `GitHub` account that
+you created and make your own copy of this repository. NOTE: It is very important that you make sure
+the checkbox for `Copy the main branch only` is NOT selected. We want to make a copy of ALL the
+branches!
+
+![Fork Page](docs/fork_page)
 
 After forking the repository, you will need to [clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
 the repository. On `Mac` and `Linux`, you can clone a repository by opening your `terminal` application
 using `git clone` and copy-pasting the URL you got from the green `Code` button above. Example below:
 
+![Clone Repository](docs/clone_link)
+
 ```bash
-git clone https://github.com/<YourUserName>/<YourProjectName>.git
+git clone git@github.com:<YourUserName>/<YourProjectName>.git
 ```
 
 This will add a folder to wherever you are currently working with the same name as `<YourProjectName>`.
