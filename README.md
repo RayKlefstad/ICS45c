@@ -204,9 +204,8 @@ On `Gradescope`, press the `submit` button and it will bring up the following wi
 
 ![](docs/submit_files.png)
 
-Then you will drag and drop the `hw0` folder that you created in the [Directory Structure](#directory-structure)
-section above. DO NOT `zip` this folder, and make sure your `hw0` folder is exactly the same as described above.
-Failure to do so will likely result in a 0 for the assignment until you fix it.
+You will then drag and drop only the files you have changed for that assignment. For example, in homework 0
+you will be changing the `main.cpp` file, so you would drag and drop that file. Then press the submit button!
 
 ## CMake
 
