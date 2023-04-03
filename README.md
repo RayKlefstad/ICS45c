@@ -23,7 +23,7 @@ To get started, we will either need to make a [GitHub account](https://docs.gith
 titled `hw<#>` on your computer and follow the [Directory Structure](#directory-structure) shown below.
 
 Once you have a `GitHub` account, follow the instructions under the [GitHub](#github) section! If you choose
-not to use `GitHub`, skip to the [Building](#building) section.
+not to use `GitHub`, skip to the [Build Instructions](#build-instructions) section.
 
 ## Directory Structure
 
@@ -110,7 +110,7 @@ in the terminal as shown below:
 git checkout hw0
 ```
 
-We are not in the `hw0` branch! You can now make changes to the files in the `src` folder!
+We are now in the `hw0` branch! You can now make changes to the files in the `src` folder!
 All changes for each homework should be made in the branch with the name of the homework in question.
 When you submit your homework, you will be selecting that branch. For instructions on making changes,
 check out the course's instructions for using `vim`/`neovim`. After making changes to the files, we will want to `commit`
@@ -159,8 +159,8 @@ cmake --build build   # Will build all of the `targets` described in the `CMake`
 ```
 
 You should never need to modify the `CMakeLists.txt` file, but if you are interested, you can reference
-the [cmake](#cmake) the section below. For more information
-on [gtest](#gtest), either check the section below or reference the [primer](https://google.github.io/googletest/primer.html).
+the [CMake](#cmake) the section below. For more information
+on [GTest](#gtest), either check the section below or reference the [primer](https://google.github.io/googletest/primer.html).
 GTest will only build if you have it installed on your system. If you do not want to install it
 on your computer, you can use the OpenLab computers as it is installed there.
 
