@@ -3,6 +3,12 @@
 Welcome to ICS 45C Homework 0! For more general instructions, please reference the `main` branch.
 This repository will focus on instructions relevant to HW0.
 
+## Files To Modify
+
+```bash
+main.cpp
+```
+
 ## Getting Started
 
 If you are using `GitHub`, then getting started is easy! You will clone this repository, then
