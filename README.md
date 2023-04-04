@@ -7,7 +7,10 @@ This repository will focus on instructions relevant to HW0.
 
 If you are using `GitHub`, then getting started is easy! You will clone this repository, then
 checkout the `hw0` branch! If you have already `cloned` this project, then you can skip to
-the [Checkout](#checkout) instructions.
+the [Checkout](#checkout) instructions. If you plan to not use `GitHub` and still want to use
+our provided tests, follow the instructions under [Directory Structure](#directory-structure).
+If you want to manually make the individual files and not use our tests, then you can simply
+make a `main.cpp` file and skip ahead to the [Coding](#coding) section.
 
 ### Clone
 
@@ -46,7 +49,8 @@ section below!
 
 ## Directory Structure
 
-If you are not using `GitHub`, you will need to make a folder named `hw0` with the following structure:
+If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
+named `hw0` with the following structure:
 
 ```bash
 ├── CMakeLists.txt
@@ -147,7 +151,7 @@ Congratulations! You are now ready to [submit](#submission) your homework!
 
 All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
 and select `HW0`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
-instructions, otherwise follow the [Folder Submission](#folder-submission) instructions.
+instructions, otherwise follow the [File Submission](#file-submission) instructions.
 
 ### GitHub Submission
 
@@ -171,11 +175,11 @@ as shown below:
 
 Now the autograder will run and give you a score!
 
-### Folder Submission
+### File Submission
 
 On `Gradescope`, press the `submit` button and it will bring up the following window:
 
 ![](docs/submit_files.png)
 
-Then you will drag and drop the `main.cpp` file from your `src` folder and press upload. As this is the only
-file we are changing, it should be the only file that you upload!
+Then you will drag and drop the `main.cpp` file from your `src` folder (or wherever you have made this
+file) and press upload. As this is the only file we are changing, it should be the only file that you upload!
