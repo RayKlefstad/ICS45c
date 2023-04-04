@@ -19,11 +19,12 @@ with `RayKlefstad`.
 ## Getting Started
 
 To get started, we will either need to make a [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
-(You can use the free account as it will provide all the tools you need) or you will need to make a folder
-titled `hw<#>` on your computer and follow the [Directory Structure](#directory-structure) shown below.
+(You can use the free account as it will provide all the tools you need) and then follow the instructions
+in the [GitHub](#github) section, or you will need to follow the instructions in the [Manual](#manual)
+section.
 
 Once you have a `GitHub` account, follow the instructions under the [GitHub](#github) section! If you choose
-not to use `GitHub`, skip to the [Build Instructions](#build-instructions) section.
+not to use `GitHub`, skip to the [Manual](#manual) section.
 
 ## Directory Structure
 
@@ -138,6 +139,48 @@ will copy any changes made to the code to your local copy on your computer:
 git pull
 ```
 
+## Manual
+
+WARNING: This section is only for students that choose not to make a `GitHub` account. If you choose not
+to make a `GitHub` account and follow the `git` instructions, you have two options. You can either copy
+the overall directory structure in the section [Directory Structure](#directory-structure) minus the `.git`,
+`.gitignore`, and `README.md` files to have the option of local building and testing, or you can make
+just the files that are needed for the specific homework assignment and submit those to `Gradescope`.
+Both methods will be shown below with the example of `HW0`.
+
+### Files Only
+
+If you only want to make and modify individual files, then you will need to make a folder somewhere on your
+computer (or OpenLab) with the name of the homework you are working on, and then make each file that the
+assignment requires. This will change from assignment to assignment, so here we will show an example for
+homework 0, but you will need to refer to the `hw<#>` branch for  specific instructions for that assignment.
+
+```bash
+# First we will make the homework 0 directory (folder):
+mkdir hw0
+
+# Move into the hw0 directory:
+cd hw0
+
+# Make the files we will need (touch creates a file if the file does not already exist):
+touch main.cpp
+```
+
+Now you have all the files you need to work on Homework 0, and can modify the files as needed to complete
+the assignment. For more instructions on that, please reference the `hw0` branch. Once you have modified
+the files as you see fit, skip ahead to the [File Submission](#file-submission) section. 
+
+### Folder Structure
+
+If you decide to copy the entire folder structure, then you will need to create the folders as shown in
+[Directory Structure](#directory-structure). The files required in the project will change depending on
+the assignment, so refer to the `hw<#>` branch for specific files you will need to make and copy. It is
+incredibly important that you copy the contents for the `CMakeLists.txt` file and `gtest/` folder
+accurately as this will determine the ability of the [Build Instructions](#build-instructions) to work
+correctly. Once you have copied the folder structure and files correctly, you can make the changes to
+the `main.cpp` file as required for the `hw0` assignment and then move on the to the
+[Build Instructions](#build-instructions) to test that you have made everything correctly.
+
 ## Build Instructions
 
 To build and run your program, you will need to open a terminal and move into the folder with your
@@ -174,7 +217,7 @@ and testing.
 
 All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
 and select `HW0`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
-instructions, otherwise follow the [Folder Submission](#folder-submission) instructions.
+instructions, otherwise follow the [File Submission](#file-submission) instructions.
 
 ### GitHub Submission
 
@@ -191,21 +234,21 @@ Now that we have committed out changes, we need to push them to `GitHub` so that
 git push
 ```
 
-Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
+Now on Gradescope, press the upload button, choose the `GitHub` option, and select your project and branch
 as shown below:
 
 ![](docs/submit_github.png)
 
 Now the autograder will run and give you a score!
 
-### Folder Submission
+### File Submission
 
-On `Gradescope`, press the `submit` button and it will bring up the following window:
+On `Gradescope`, press the `upload` button and it will bring up the following window:
 
 ![](docs/submit_files.png)
 
 You will then drag and drop only the files you have changed for that assignment. For example, in homework 0
-you will be changing the `main.cpp` file, so you would drag and drop that file. Then press the submit button!
+you will be changing the `main.cpp` file, so you would drag and drop that file. Then press the upload button!
 
 ## CMake
 
