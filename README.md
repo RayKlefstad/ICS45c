@@ -1,9 +1,7 @@
 # ICS 45C: Homework 0
 
 Welcome to ICS 45C Homework 0! For more general instructions, please reference the `main` branch.
-This repository will focus on instructions relevant to HW0.
-
-## Files To Modify
+This repository will focus on instructions relevant to HW0. In this assignment, you will be modifying:
 
 ```bash
 main.cpp
