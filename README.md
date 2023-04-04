@@ -44,9 +44,7 @@ All assignments for 45C: Spring 2023 should follow the directory structure as sh
 this template directory. The easiest way to ensure that your project has the correct structure is
 to fork this repository and to use it for writing your code. Instructions for doing this are found
 in the [GitHub section below](#github). Each homework will include all of the files you will need
-to complete the assignment, so you SHOULD NOT add any additional files. (If you are confident in
-your `CMake` abilities, you may add more files to the `src` and `gtest` folder only, as the files
-will be `Globbed` by the autograder)
+to complete the assignment, so you SHOULD NOT add any additional files.
 
 ## GitHub
 
