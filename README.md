@@ -32,6 +32,7 @@ not to use `GitHub`, skip to the [Manual](#manual) section.
 ├── .git
 ├── .gitignore
 ├── CMakeLists.txt
+├── CMakePresets.txt
 ├── README.md
 ├── gtest
 │   ├── gtestmain.cpp
@@ -191,12 +192,13 @@ cd <YourProjectName>    # So if we had the project in a folder named Projects: c
 Once you are in the project folder, use the following commands to build and then run your project:
 
 ```bash
-cmake -B build        # Create a folder named `build` and run `CMake` to produce build files there
-cmake --build build   # Will build all of the `targets` described in the `CMake` file
+cmake --preset default  # Create a folder named `build` and run `CMake` to produce build files there
+                        # using the settings in the CMakePresets.json file
+cmake --build build     # Will build all of the `targets` described in the `CMake` file
 
 # The build folder will now contain two executable files that you can run:
-./build/hw            # Runs the `main` function from src/main.cpp
-./build/gtest         # Runs the tests you wrote in `gtest/tests.cpp`
+./build/hw              # Runs the `main` function from src/main.cpp
+./build/gtest           # Runs the tests you wrote in `gtest/tests.cpp`
 ```
 
 You should never need to modify the `CMakeLists.txt` file, but if you are interested, you can reference
