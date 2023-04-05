@@ -58,6 +58,7 @@ named `hw0` with the following structure:
 
 ```bash
 ├── CMakeLists.txt
+├── CMakePresets.txt
 ├── gtest
 │   ├── gtestmain.cpp
 │   └── tests.cpp
@@ -65,9 +66,10 @@ named `hw0` with the following structure:
     └── main.cpp
 ```
 
-You should copy everything from the CMakeLists.txt file into your own, as well as the files `gtestmain.cpp`
-and `tests.cpp`. This will allow you to build and run the tests for this assignment. If you do not
-follow this structure, you will not be able to use the `CMakeLists.txt` file as provided!
+You should copy everything from the CMakeLists.txt and CMakePresets files into your own, as well as
+the files `gtestmain.cpp` and `tests.cpp`. This will allow you to build and run the tests for this
+assignment. If you do not follow this structure, you will not be able to use the `CMakeLists.txt`
+file as provided!
 
 ## Coding
 
@@ -109,15 +111,15 @@ cd <YourProjectPath>    # So if we had the project in a folder named Projects: c
 Once you are in the project folder, use the following commands to build your project:
 
 ```bash
-cmake -B build        # Create a folder named `build` and run `CMake` to produce build files there
-cmake --build build   # Will build all of the `targets` described in the `CMake` file
+cmake --preset default  # Create a folder named `build` and run `CMake` to produce build files there
+cmake --build build     # Will build all of the `targets` described in the `CMake` file
 ```
 
 This will produce a folder named `build`, which will have two new executables you can run! First, we will
 run your code you just wrote:
 
 ```bash
-./build/hw            # Runs the `main` function from src/main.cpp
+./build/hw              # Runs the `main` function from src/main.cpp
 ```
 
 This should output the following message to your terminal:
