@@ -44,13 +44,13 @@ add_executable(${PROJECT_NAME} ${SRC_FILES_EXCEPT_MAIN} src/main.cpp)
 # for this to build.
 find_package(GTest)
 if (GTest_FOUND)
-    project(gtest CXX)
+    project(hw_gtests CXX)
 
     # If you add other test files, be sure to add them to
     # this list!
     set(GTEST_FILES
         gtest/gtestmain.cpp
-        gtest/tests.cpp
+        gtest/hw_gtests.cpp
     )
 
     include_directories(${GTEST_INCLUDE_DIRS})
