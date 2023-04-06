@@ -75,22 +75,15 @@ have instructions for Linux, Mac, and Windows). After you create your key, you w
 it to `GitHub`, you can do that by following 
 [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
-Once you have set up your `username`, `email`, and `ssh key`, you will need to
-[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) this
-repository. To fork the repository, you will clink the `fork` button at the top right of the `GitHub`
-page highlighted below:
+Once you have set up your `username`, `email`, and `ssh key`, you will need to create a private
+[repository](https://docs.github.com/en/get-started/quickstart/create-a-repo) using your new account!
+Your new repository should be named something like `ICS45C`.
 
-![](docs/fork_highlighted.png)
-
-This will bring up another page which will allow you to select your personal `GitHub` account that
-you created and make your own copy of this repository. NOTE: It is very important that you make sure
-the checkbox for `Copy the main branch only` is NOT selected. We want to make a copy of ALL the
-branches!
-
-![](docs/fork_page.png)
-
-After forking the repository, you will need to [clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
-the repository. On `Mac` and `Linux`, you can clone a repository by opening your `terminal` application
+WARNING: MAKE SURE THAT YOU SET THE REPOSITORY TO PRIVATE! If your repository is not private, others
+can see it and will be able to cheat off of your homework and it could end up being an academic
+dishonesty case! If you run in to trouble, please ask questions on EdStem!
+After you make a private repository, you will need to [clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
+our public the repository. On `Mac` and `Linux`, you can clone a repository by opening your `terminal` application
 using `git clone` and copy-pasting the URL you got from the green `Code` button above. Example below:
 
 ![](docs/clone_link.png)
@@ -98,13 +91,47 @@ using `git clone` and copy-pasting the URL you got from the green `Code` button 
 And then in the terminal, type:
 
 ```bash
-git clone git@github.com:<YourUserName>/<YourProjectName>.git
+git clone https://github.com/mgdickerson/CS45C_Spring_2023.git
 ```
 
-This will add a folder to wherever you are currently working with the same name as `<YourProjectName>`.
-Now, to work in a specific homework, you will need to `checkout` the branch of the homework number you
-are working on. For example, if you want to work on `Homework 0`, you will `checkout` the branch `hw0`
-in the terminal as shown below:
+This will add the folder `CS45C_Spring_2023` to your current working directory, which you can see by
+typing the `ls` command. After cloning our public repository, you are going to mirror it to your own
+`private` respository using the following steps:
+
+```bash
+# Move into the CS45C_Spring_2023 Folder.
+cd CS45C_Spring_2023
+
+# Push a mirror (or a copy) of this folder to your private repo:
+git push --mirror git@github.com:<YourGithubUserName>/<YourPrivateProjectName>.git
+# As an example, if you used our naming advice above (and your GitHub ID was RayKlefstad), your command would be:
+# git push --mirror git@github.com:RayKlefstad/ICS45C.git
+
+# Move back out of the directory
+cd ..
+
+# Remove the public repository
+rm -rf CS45C_Spring_2023
+
+# Clone your private repository
+git clone git@github.com:<YourGithubUserName>/<YourPrivateProjectName>.git
+```
+
+You should now have a complete copy of our public repository in your private one! We will want to add
+one additional step to make sure we can pull any updates as well. This step will become important later
+so it is not important that you understand this step yet, but very important that you do it:
+
+```bash
+# Move into private repo:
+cd <YourPrivateRepoName>
+
+# Add our public repository as a remote source:
+git remote add public https://github.com/mgdickerson/CS45C_Spring_2023.git
+```
+
+With that completed, now you can get to work on a specific homework! To do this, you will need to `checkout`
+the branch of the homework number you are working on. For example, if you want to work on `Homework 0`, you
+will `checkout` the branch `hw0` in the terminal as shown below:
 
 ```bash
 git checkout hw0
