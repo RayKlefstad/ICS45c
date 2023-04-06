@@ -1,6 +1,6 @@
-# ICS 45C: Homework 0
+# ICS 46: Homework 0
 
-Welcome to ICS 45C Homework 0! For more general instructions, please reference the `main` branch.
+Welcome to ICS 46 Homework 0! For more general instructions, please reference the `main` branch.
 This repository will focus on instructions relevant to HW0. In this assignment, you will be modifying:
 
 ```bash
@@ -28,14 +28,14 @@ the image below:
 And then in the terminal, type:
 
 ```bash
-git clone <LinkCopiedAbove>  # For example: git clone git@github.com:klefstad/CS45C-Template.git 
+git clone <LinkCopiedAbove>  # For example: git clone git@github.com:klefstad/CS46-Template.git 
 ```
 
-There should now be a folder named `CS45C-Template`. We will move into that directory using the
+There should now be a folder named `CS46-Template`. We will move into that directory using the
 command:
 
 ```bash
-cd CS45C-Template
+cd CS46-Template
 ```
 
 Once inside the directory, we will `checkout` the `hw0` branch!
@@ -105,7 +105,7 @@ If you are not already in a terminal (or ssh with OpenLab) from the above instru
 to open a terminal and move into your project folder as show below:
 
 ```bash
-cd <YourProjectPath>    # So if we had the project in a folder named Projects: cd Projects/CS45C-Template
+cd <YourProjectPath>    # So if we had the project in a folder named Projects: cd Projects/CS46-Template
 ```
 
 Once you are in the project folder, use the following commands to build your project:
