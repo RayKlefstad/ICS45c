@@ -61,13 +61,13 @@ named `hw0` with the following structure:
 ├── CMakePresets.txt
 ├── gtest
 │   ├── gtestmain.cpp
-│   └── tests.cpp
+│   └── hw_gtests.cpp
 └── src
     └── main.cpp
 ```
 
 You should copy everything from the CMakeLists.txt and CMakePresets files into your own, as well as
-the files `gtestmain.cpp` and `tests.cpp`. This will allow you to build and run the tests for this
+the files `gtestmain.cpp` and `hw_gtests.cpp`. This will allow you to build and run the tests for this
 assignment. If you do not follow this structure, you will not be able to use the `CMakeLists.txt`
 file as provided!
 
@@ -133,7 +133,7 @@ If you are not on OpenLab or have not installed `GTest` on your computer you are
 and move on to [Submission](#submission).
 
 ```bash
-./build/gtest         # Runs the tests you wrote in `gtest/tests.cpp`
+./build/hw_gtests      # Runs the tests you wrote in `gtest/hw_gtests.cpp`
 ```
 
 This should output:
