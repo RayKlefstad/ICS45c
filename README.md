@@ -127,6 +127,11 @@ cd <YourPrivateRepoName>
 
 # Add our public repository as a remote source:
 git remote add public https://github.com/mgdickerson/CS45C_Spring_2023.git
+
+# WARNING: THIS STEP IS VERY IMPORTANT AND WAS MISSING BEFORE:
+git fetch public
+# This step will be important as it will pull all changes and all new branches from this public
+# repository to your private one.
 ```
 
 With that completed, now you can get to work on a specific homework! To do this, you will need to `checkout`
