@@ -160,6 +160,10 @@ project changes into the online storage at `GitHub` and make it visible and copy
 working with.
 
 ```bash
+# The first time you push this branch, you will likely need to set the upstream to `origin`:
+git push --set-upstream origin hw0
+
+# After that, every time you push you can use this command:
 git push
 ```
 
