@@ -7,6 +7,17 @@ This repository will focus on instructions relevant to HW0. In this assignment, 
 main.cpp
 ```
 
+WARNING: As a heads up, you will likely need to do the following to make this accessible and then
+link it to your personal repo (this assumes you have followed the steps under the main branch):
+
+```bash
+# Pull changes from the `public` repository
+git fetch public
+
+# Push this branch to "MY" repository and "link" it to push to my branch instead of public
+git push -u origin hw0
+```
+
 ## Getting Started
 
 If you are using `GitHub`, then getting started is easy! You will clone this repository, then
