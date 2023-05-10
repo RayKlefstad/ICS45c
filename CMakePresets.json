@@ -59,6 +59,12 @@
             }
         },
         {
+            "name": "default-valgrind",
+            "inherits": "linux-valgrind",
+            "displayName": "OpenLab Valgrind",
+            "description": "Default build settings for OpenLab with Valgrind"
+        },
+        {
             "name": "macos-base",
             "inherits": "common-base",
             "hidden": true,
