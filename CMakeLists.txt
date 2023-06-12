@@ -16,25 +16,29 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # good to have.
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# This will contain the list of all *.cpp and *.h files you make
-# for the project. Make sure that you add the files to
-# CMakeLists.txt when you add it to your src folder or it
-# will not compile!
-# NOTE: *.h files are not strictly necessary to be added for most
-# build systems but it is considered best practice for
-# portability (e.g. for IDEs like Visual Studio).
-# WARNING: DO NOT INCLUDE MAIN! We will add the main.cpp
-# file in the executable command.
-set(SRC_FILES_EXCEPT_MAIN
+# Add knots main executable
+set(KNOT_SRC_FILES
+  src/convert_knots.h
+  src/convert_knots.cpp
 )
+project(knot CXX)
+add_executable(${PROJECT_NAME} ${KNOT_SRC_FILES})
 
-# Set up a project with a name and C++ as the language:
-project(hw CXX)
+# Add stack main executable
+set(STACK_SRC_FILES
+  src/stack.h
+  src/stack.cpp
+)
+project(stack CXX)
+add_executable(${PROJECT_NAME} ${STACK_SRC_FILES})
 
-# Adds an executable target that will be built by gcc/g++,
-# the name being the same as the project name (hw in this
-# example).
-add_executable(${PROJECT_NAME} ${SRC_FILES_EXCEPT_MAIN} src/main.cpp)
+# Add letter_count main executable
+set(COUNT_SRC_FILES
+  src/letter_count.h
+  src/letter_count.cpp
+)
+project(count CXX)
+add_executable(${PROJECT_NAME} ${COUNT_SRC_FILES})
 
 # This is for optionally building GTest suites. If GTest
 # is installed on your system and it can be found on your
@@ -44,17 +48,64 @@ add_executable(${PROJECT_NAME} ${SRC_FILES_EXCEPT_MAIN} src/main.cpp)
 # for this to build.
 find_package(GTest)
 if (GTest_FOUND)
-    project(hw_gtests CXX)
+    # Knot Tests:
+    project(knot_gtests CXX)
 
     # If you add other test files, be sure to add them to
     # this list!
-    set(GTEST_FILES
+    # NOTE : We are adding src/convert_knots.h manually
+    # here to disconnect errors in `stack` from affecting
+    # this test.
+    set(KNOT_GTEST_FILES
         gtest/gtestmain.cpp
-        gtest/hw_gtests.cpp
+        gtest/knot_gtests.cpp
+        src/convert_knots.h
     )
 
     include_directories(${GTEST_INCLUDE_DIRS})
-    add_executable(${PROJECT_NAME} ${SRC_FILES_EXCEPT_MAIN} ${GTEST_FILES})
+    add_executable(${PROJECT_NAME} ${KNOT_GTEST_FILES})
+    # This ensures that the cpp files in gtest/ can include headers from
+    # src/ simply by doing
+    #     #include "foo.h"
+    # instead of having to write the cumbersome
+    #     #include "../src/foo.h"
+    target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
+    target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
+
+    # Stack Tests:
+    project(stack_gtests CXX)
+
+    # If you add other test files, be sure to add them to
+    # this list!
+    set(STACK_GTEST_FILES
+        gtest/gtestmain.cpp
+        gtest/stack_gtests.cpp
+        src/stack.h
+    )
+
+    include_directories(${GTEST_INCLUDE_DIRS})
+    add_executable(${PROJECT_NAME} ${STACK_GTEST_FILES})
+    # This ensures that the cpp files in gtest/ can include headers from
+    # src/ simply by doing
+    #     #include "foo.h"
+    # instead of having to write the cumbersome
+    #     #include "../src/foo.h"
+    target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
+    target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
+
+    # Letter Count Tests:
+    project(count_gtests CXX)
+
+    # If you add other test files, be sure to add them to
+    # this list!
+    set(COUNT_GTEST_FILES
+        gtest/gtestmain.cpp
+        gtest/count_gtests.cpp
+        src/letter_count.h
+    )
+
+    include_directories(${GTEST_INCLUDE_DIRS})
+    add_executable(${PROJECT_NAME} ${COUNT_GTEST_FILES})
     # This ensures that the cpp files in gtest/ can include headers from
     # src/ simply by doing
     #     #include "foo.h"
@@ -63,3 +114,4 @@ if (GTest_FOUND)
     target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
     target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
 endif()
+
