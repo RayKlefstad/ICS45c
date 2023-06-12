@@ -1,40 +1,42 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(HW2 CXX)
+project(HW3 CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(WORD_COUNT_SRC_FILES
-  src/word_count.cpp
-  src/word_count.h
+set(STRING_FILES
+  src/string.cpp
+  src/string.hpp
 )
-add_executable(word_count ${WORD_COUNT_SRC_FILES} src/word_count_main.cpp)
-
-set(COINS_SRC_FILES
-  src/coins.cpp
-  src/coins.h
-)
-add_executable(coins_simple ${COINS_SRC_FILES} src/coins_simple.cpp)
-add_executable(coins_menu ${COINS_SRC_FILES} src/coins_menu.cpp)
-add_executable(coins_transfer ${COINS_SRC_FILES} src/coins_transfer.cpp)
+add_executable(standard_main ${STRING_FILES} src/standard_main.cpp)
 
 find_package(GTest)
 if (GTest_FOUND)
-  set(WORD_COUNT_TEST_FILES
-    gtest/word_count_gtests.cpp
+  set(STRING_TEST_FILES
+    gtest/string_gtests.cpp
+    gtest/student_gtests.cpp
   )
 
-  add_executable(word_count_gtests gtest/gtestmain.cpp ${WORD_COUNT_SRC_FILES} ${WORD_COUNT_TEST_FILES})
-  target_include_directories(word_count_gtests PRIVATE src ${GTEST_INCLUDE_DIRS})
-  target_link_libraries(word_count_gtests PRIVATE ${GTEST_LIBRARIES})
+  add_executable(string_gtests gtest/gtestmain.cpp ${STRING_FILES} ${STRING_TEST_FILES})
+  target_include_directories(string_gtests PRIVATE ${GTEST_INCLUDE_DIRS})
+  target_include_directories(string_gtests AFTER PRIVATE src)
+  target_link_libraries(string_gtests PRIVATE ${GTEST_LIBRARIES})
 
-  set(COINS_TEST_FILES
-    gtest/coins_gtests.cpp
+  set(STUDENT_TEST_FILES
+    gtest/student_gtests.cpp
   )
+  add_executable(student_gtests gtest/gtestmain.cpp ${STRING_FILES} ${STUDENT_TEST_FILES})
+  target_include_directories(student_gtests PRIVATE ${GTEST_INCLUDE_DIRS})
+  target_include_directories(student_gtests AFTER PRIVATE src)
+  target_link_libraries(student_gtests PRIVATE ${GTEST_LIBRARIES})
 
-  add_executable(coins_gtests gtest/gtestmain.cpp ${COINS_SRC_FILES} ${COINS_TEST_FILES})
-  target_include_directories(coins_gtests PRIVATE src ${GTEST_INCLUDE_DIRS})
-  target_link_libraries(coins_gtests PRIVATE ${GTEST_LIBRARIES})
+
+  set(STANDARD_MAIN_FILES
+    gtest/standard_main_gtests.cpp)
+  add_executable(standard_main_gtests gtest/gtestmain.cpp ${STRING_FILES} ${STANDARD_MAIN_FILES})
+  target_include_directories(standard_main_gtests PRIVATE ${GTEST_INCLUDE_DIRS})
+  target_include_directories(standard_main_gtests AFTER PRIVATE src)
+  target_link_libraries(standard_main_gtests PRIVATE ${GTEST_LIBRARIES})
 endif()
