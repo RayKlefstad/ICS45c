@@ -1,66 +1,25 @@
 # ICS 46: Homework 0
 
-Welcome to ICS 46 Homework 0! For more general instructions, please reference the `main` branch.
-This repository will focus on instructions relevant to HW0. In this assignment, you will be modifying:
+Welcome to ICS 46 Homework 0! In this assignment, you will be modifying:
 
 ```bash
 main.cpp
 ```
 
-WARNING: As a heads up, you will likely need to do the following to make this accessible and then
-link it to your personal repo (this assumes you have followed the steps under the main branch):
-
-```bash
-# Pull changes from the `public` repository
-git fetch public
-
-# Push this branch to "MY" repository and "link" it to push to my branch instead of public
-git push -u origin hw0
-```
-
 ## Getting Started
 
-If you are using `GitHub`, then getting started is easy! You will clone this repository, then
-checkout the `hw0` branch! If you have already `cloned` this project, then you can skip to
-the [Checkout](#checkout) instructions. If you plan to not use `GitHub` and still want to use
-our provided tests, follow the instructions under [Directory Structure](#directory-structure).
-If you want to manually make the individual files and not use our tests, then you can simply
-make a `main.cpp` file and skip ahead to the [Coding](#coding) section.
-
-### Clone
-
-On `Linux` and `Mac`, you can open a new terminal. On Windows you will open `Git BASH` which
-should have been installed following the instructions under the `main` branch. On OpenLab,
-you are already in a terminal! Next, you will want to copy the repository link as shown in
-the image below:
-
-![](docs/clone_link.png)
-
-And then in the terminal, type:
+To get started with this homework, you need to ensure that you have followed all of the
+instructions in the `main` branch, and have cloned your repository to your local machine.
+Once you have the folder on your local machine, you can run the following commands in your
+`shell`:
 
 ```bash
-git clone <LinkCopiedAbove>  # For example: git clone git@github.com:klefstad/CS46-Template.git 
-```
+# Move into the project folder:
+cd <ProjectFolder>
 
-There should now be a folder named `CS46-Template`. We will move into that directory using the
-command:
-
-```bash
-cd CS46-Template
-```
-
-Once inside the directory, we will `checkout` the `hw0` branch!
-
-### Checkout
-
-In the same terminal as before, you will type:
-
-```bash
+# Change to the current homework branch:
 git checkout hw0
 ```
-
-You are now in the `hw0` branch! You can now make changes to your code as shown in the [Coding](#coding)
-section below!
 
 ## Directory Structure
 
