@@ -5,21 +5,12 @@ If you are working without github, then copy the [Directory Structure](#director
 
 ## Getting Started
 
-To get started with this homework, first you will need to `fetch` changes to your personal repository,
-checkout `hw8`, then push the `hw8` branch to your remote repository.
-
 ```bash
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
-# Fetch updates:
-git fetch public
-
 # Checkout hw8 from the public branch:
 git checkout hw8
-
-# Push the newly checked out branch to your private repository:
-git push -u origin hw8
 ```
 
 ## Directory Structure
