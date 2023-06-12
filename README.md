@@ -5,21 +5,12 @@ If you are working without github, then copy the [Directory Structure](#director
 
 ## Getting Started
 
-To get started with this homework, first you will need to `fetch` changes to your personal repository,
-checkout `hw3`, then push the `hw3` branch to your remote repository.
-
 ```bash
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
-# Fetch updates:
-git fetch public
-
 # Checkout hw3 from the public branch:
 git checkout hw3
-
-# Push the newly checked out branch to your private repository:
-git push -u origin hw3
 ```
 
 ## Directory Structure
