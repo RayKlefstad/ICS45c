@@ -13,9 +13,8 @@ instructions below to set yours up!
 ## Tools
 
 The following are a list of tools that will be used in this course. All of these tools have been
-setup for use on [OpenLab](REPLACEME). If you wish to use your personal system instead, you will
-need to install the following tools, however we `WILL NOT` support issues encountered on your
-personal setup, only those on `OpenLab`.
+set up for use on [OpenLab](REPLACEME). Remember that we `WILL NOT` be able to support issues 
+encountered if you use your personal setup, only the setup on `OpenLab`.
 
 - git
 - gcc
@@ -42,12 +41,12 @@ git config --global user.name "<YourNameHere>"    # Example: "Ray Klefstad"
 git config --global user.email "<YourEmailHere>"  # Example: "klefstad@uci.edu"
 ```
 
-We will also set up an `ssh` key as `GitHub` is moving away from allowing the usage of `https`
+We will also set up an `ssh` key because `GitHub` is moving away from allowing the usage of `https`
 links. Please first take a look at [this page](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
 which explains how to make an `ssh` key and then either follow the instructions there (NOTE: At the
 top of the page, it will have three tabs for operating systems. OpenLab is a `Linux` machine, so make
-sure that you select `Linux` and follow those instructions). After you create your key, you will need to add
-it to `GitHub`, you can do that by following 
+sure that you select `Linux` and follow those instructions.) After you create your key, you will need to add
+it to `GitHub`, by following 
 [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
 Once you have set up your `username`, `email`, and `ssh key`, you will need to
