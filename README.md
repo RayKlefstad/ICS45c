@@ -1,6 +1,6 @@
-# ICS 46: Homework 0
+# ICS 45C: Homework 0.2
 
-Welcome to ICS 46 Homework 0! In this assignment, you will be modifying:
+Welcome to ICS 45C Homework 0.2! In this assignment, you will be modifying:
 
 ```bash
 main.cpp
@@ -37,7 +37,7 @@ named `hw0` with the following structure:
 ```
 
 You should copy everything from the CMakeLists.txt and CMakePresets files into your own, as well as
-the files `gtestmain.cpp` and `hw_gtests.cpp`. This will allow you to build and run the tests for this
+the files `gtestmain.cpp` and `hw_gtests.cpp`. This process will allow you to build and run the tests for this
 assignment. If you do not follow this structure, you will not be able to use the `CMakeLists.txt`
 file as provided!
 
@@ -71,7 +71,7 @@ Ensure that you have left `insert` mode by pressing `Esc`, then `write` and `qui
 
 ## Build Instructions
 
-If you are not already in a terminal (or ssh with OpenLab) from the above instructions, you will need
+If you are not already in a terminal (or SSH with OpenLab) from the above instructions, you will need
 to open a terminal and move into your project folder as show below:
 
 ```bash
@@ -126,8 +126,8 @@ Congratulations! You are now ready to [submit](#submission) your homework!
 ## Submission
 
 All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
-and select `HW0`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
-instructions, otherwise follow the [File Submission](#file-submission) instructions.
+and select `Homework 0.2 Github`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
+instructions; otherwise, follow the [File Submission](#file-submission) instructions.
 
 ### GitHub Submission
 
