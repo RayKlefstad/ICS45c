@@ -126,23 +126,25 @@ Congratulations! You are now ready to [submit](#submission) your homework!
 ## Submission
 
 All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
-and select `Homework 0.2 Github`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
-instructions; otherwise, follow the [File Submission](#file-submission) instructions.
+and select `Homework 0.2 Github`.
 
-### GitHub Submission
-
-First, we need to make sure that we commit all of our changes we made! In a terminal inside your project folder,
+First, we need to make sure that we `commit` all of our changes we made! In a terminal inside your project folder,
 run the following command:
 
 ```bash
 git commit -a -m "Submission commit of HW0."
 ```
 
-Now that we have committed out changes, we need to push them to `GitHub` so that `Gradescope` can see them.
+Now that we have committed out changes, we need to push them to `GitHub` so that `Gradescope` can see them. Your
+local repository should have two remotes: `origin` which represents the repository at `RayKlefstad/ICS45c` and `my_repo`
+which represents your own private repository. In order to push to your repository, use the command:
 
 ```bash
-git push
+git push -u my_repo
 ```
+
+This will set the default remote for this branch to `my_repo`. In particular, if you make any future changes and
+want to resubmit them, you can create another `commit` with `git commit -a -m "Fixed bug XZY"` followed by `git push`.
 
 Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
 as shown below:
@@ -150,12 +152,3 @@ as shown below:
 ![](docs/submit_github.png)
 
 Now the autograder will run and give you a score!
-
-### File Submission
-
-On `Gradescope`, press the `submit` button and it will bring up the following window:
-
-![](docs/submit_files.png)
-
-Then you will drag and drop the `main.cpp` file from your `src` folder (or wherever you have made this
-file) and press upload. As this is the only file we are changing, it should be the only file that you upload!
