@@ -68,9 +68,9 @@ not be able to submit changes yet as you also need your own private copy of the 
 
 To do this, click on the + in the top right of the page, and select `New repository` as shown below:
 
-[...] TODO
+![](docs/new_repository.png)
 
-Give your repository a name such as `ICS45c` and **make sure you set the visibility to private**. Lastly,
+Give your repository a name such as `ICS45c` and **make sure you set the visibility to private**. Once created,
 you will set this repository up as a second `remote` so you can `push` your changes to it. To do this,
 start by copying the SSH clone link of your private repository from the green `Code` button just as you did
 for this repository. Now go back to openlab inside the folder `ICS45c` and run this command with the
