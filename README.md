@@ -7,8 +7,8 @@ branch drop down menu above to select the homework you wish to work on!
 
 ![](docs/branches.png)
 
-This class will `REQUIRE` the use of a [GitHub](#github) account, so be sure to follow the
-instructions below to set yours up!
+This class will `REQUIRE` the use of a [GitHub](#github) account, so be sure to set one up before
+following the instructions below. It does not need to be linked to your UCI email.
 
 ## Tools
 
@@ -50,8 +50,8 @@ it to `GitHub`, by following
 [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
 Once you have set up your `username`, `email`, and `ssh key`, you will need to
-[clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
-your repository! One OpenLab, you can clone a repository by using `git clone` and copy-pasting the URL
+[clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+this repository. On OpenLab, you can clone a repository by using `git clone` and copy-pasting the URL
 you got from the green `Code` button above. Example below:
 
 ![](docs/clone_link.png)
@@ -62,8 +62,33 @@ And then in the terminal, type:
 git clone <YourLinkHere>
 ```
 
-This will add the folder `CS45C_Spring_2023` to your current working directory, which you can see by
-typing the `ls` command. Now you are ready to move on to `Homework 0`! 
+This will add the folder `ICS45c` to your current working directory, which you can see by
+typing the `ls` command. You can now work in this folder and make changes locally, however you will
+not be able to submit changes yet as you also need your own private copy of the repository on GitHub.
+
+To do this, click on the + in the top right of the page, and select `New repository` as shown below:
+
+[...] TODO
+
+Give your repository a name such as `ICS45c` and **make sure you set the visibility to private**. Lastly,
+you will set this repository up as a second `remote` so you can `push` your changes to it. To do this,
+start by copying the SSH clone link of your private repository from the green `Code` button just as you did
+for this repository. Now go back to openlab inside the folder `ICS45c` and run this command with the
+copy-pasted link:
+
+```bash
+git remote add my_repo <YourLinkHere>
+```
+
+Your repository should now be set up correctly. To verify that it works, you can use the command:
+
+```bash
+git push my_repo
+```
+
+This will push the current content of your `ICS45c` folder including the text you are reading right now
+to your private GitHub repository. If this finishes with no errors and your private repository is no longer
+empty, then everything works and you can move on to `Homework 0.2`!
 
 ## CMake
 
