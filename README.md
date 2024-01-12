@@ -38,7 +38,7 @@ If you are not already in a terminal (i.e., SSH with OpenLab), you will need
 to open a terminal and move into your project folder as show below:
 
 ```bash
-cd <YourProjectPath>    # So if we had the project in a folder named Projects: cd Projects/CS45C-Template
+cd <YourProjectPath>    # Most likely, this would be: cd ~/ICS45c
 ```
 
 This time, we are going to go into a little more detail on how `CMake` works. The `CMake` process is
@@ -64,8 +64,7 @@ Or you can pick a specific target to build. For this homework, there are 6 possi
 * `knot` (which is the `convert_knots.cpp` file),
 *  `knot_gtests` (`knot_gtests.cpp`),
 *  `stack` (`stack.cpp`)
-* `stack_gtests`
-* (`stack_gtests.cpp`),
+* `stack_gtests` (`stack_gtests.cpp`),
 * `count` (`letter_count.cpp`), and
 * `count_gtests` (`letter_count.cpp`).
   
