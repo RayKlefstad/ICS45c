@@ -1,12 +1,12 @@
 # ICS 45C: Homework 1
 
-Welcome to ICS 45C Homework 1! Instructions from this point on will assume the use
-of `GitHub`. If you are working without `github`, then copy the
+Welcome to ICS 45C Homework 1! These instructions will continue to help you use
+`GitHub` and the GTest files provided here in the following
 [Directory Structure](#directory-structure).
 
 ## Getting Started
 
-To get started with this homework, you will need to `checkout` this homework branch.
+To get started with Homework 1, you will need to `checkout` this Homework 1 branch.
 
 ```bash
 # Checkout hw1
@@ -14,9 +14,6 @@ git checkout hw1
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw1` with the following structure:
 
 ```bash
 ├── CMakeLists.txt
@@ -35,14 +32,9 @@ named `hw1` with the following structure:
     └── stack.hpp
 ```
 
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`. This will allow you to build and run the
-tests for this assignment. If you do not follow this structure, you will not be able to use the
-`CMakeLists.txt` file as provided!
-
 ## Build Instructions
 
-If you are not already in a terminal (or ssh with OpenLab) from the above instructions, you will need
+If you are not already in a terminal (i.e., SSH with OpenLab), you will need
 to open a terminal and move into your project folder as show below:
 
 ```bash
@@ -50,7 +42,7 @@ cd <YourProjectPath>    # So if we had the project in a folder named Projects: c
 ```
 
 This time, we are going to go into a little more detail on how `CMake` works. The `CMake` process is
-basically comprised of two steps: producing project build files and actually building the executable for
+basically comprised of two steps: producing project build files, and actually building the executable for
 the project. To produce the build files for our project we run the first command:
 
 ```bash
@@ -69,8 +61,14 @@ cmake --build build   # Will build all of the `targets` described in the `CMake`
 ```
 
 Or you can pick a specific target to build. For this homework, there are 6 possible `targets`:
-`knot` (which is the `convert_knots.cpp` file), `knot_gtests` (`knot_gtests.cpp`), `stack` (`stack.cpp`)
-`stack_gtests` (`stack_gtests.cpp`), `count` (`letter_count.cpp`), and `count_gtests` (`letter_count.cpp`).
+* `knot` (which is the `convert_knots.cpp` file),
+*  `knot_gtests` (`knot_gtests.cpp`),
+*  `stack` (`stack.cpp`)
+* `stack_gtests`
+* (`stack_gtests.cpp`),
+* `count` (`letter_count.cpp`), and
+* `count_gtests` (`letter_count.cpp`).
+  
 These `targets` are defined in the `CMakeLists.txt` file as `project(<name> CXX)`, so if you want to find
 the `targets` yourself, you can always check that file. We will also always give you the available `targets`
 in this class. Below are the individual `target` commands you can run:
@@ -129,7 +127,7 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
+All submissions will be done through [GradeScope](https://www.gradescope.com/). Open the GradeScope page
 and select `HW1`.
 
 First, we need to make sure that we commit all of our changes we made! In a terminal inside your project folder,
@@ -145,7 +143,7 @@ Now that we have committed out changes, we need to push them to `GitHub` so that
 git push -u my_repo
 ```
 
-Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
+Now on GradeScope, press the submit button, choose the `GitHub` option, and select your project and branch
 as shown below:
 
 ![](docs/cs45c_hw1_github.png)
