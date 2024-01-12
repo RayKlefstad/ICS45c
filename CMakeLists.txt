@@ -18,7 +18,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Add knots main executable
 set(KNOT_SRC_FILES
-  src/convert_knots.h
+  src/convert_knots.hpp
   src/convert_knots.cpp
 )
 project(knot CXX)
@@ -26,7 +26,7 @@ add_executable(${PROJECT_NAME} ${KNOT_SRC_FILES})
 
 # Add stack main executable
 set(STACK_SRC_FILES
-  src/stack.h
+  src/stack.hpp
   src/stack.cpp
 )
 project(stack CXX)
@@ -34,7 +34,7 @@ add_executable(${PROJECT_NAME} ${STACK_SRC_FILES})
 
 # Add letter_count main executable
 set(COUNT_SRC_FILES
-  src/letter_count.h
+  src/letter_count.hpp
   src/letter_count.cpp
 )
 project(count CXX)
@@ -53,22 +53,22 @@ if (GTest_FOUND)
 
     # If you add other test files, be sure to add them to
     # this list!
-    # NOTE : We are adding src/convert_knots.h manually
+    # NOTE : We are adding src/convert_knots.hpp manually
     # here to disconnect errors in `stack` from affecting
     # this test.
     set(KNOT_GTEST_FILES
         gtest/gtestmain.cpp
         gtest/knot_gtests.cpp
-        src/convert_knots.h
+        src/convert_knots.hpp
     )
 
     include_directories(${GTEST_INCLUDE_DIRS})
     add_executable(${PROJECT_NAME} ${KNOT_GTEST_FILES})
     # This ensures that the cpp files in gtest/ can include headers from
     # src/ simply by doing
-    #     #include "foo.h"
+    #     #include "foo.hpp"
     # instead of having to write the cumbersome
-    #     #include "../src/foo.h"
+    #     #include "../src/foo.hpp"
     target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
     target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
 
@@ -80,16 +80,16 @@ if (GTest_FOUND)
     set(STACK_GTEST_FILES
         gtest/gtestmain.cpp
         gtest/stack_gtests.cpp
-        src/stack.h
+        src/stack.hpp
     )
 
     include_directories(${GTEST_INCLUDE_DIRS})
     add_executable(${PROJECT_NAME} ${STACK_GTEST_FILES})
     # This ensures that the cpp files in gtest/ can include headers from
     # src/ simply by doing
-    #     #include "foo.h"
+    #     #include "foo.hpp"
     # instead of having to write the cumbersome
-    #     #include "../src/foo.h"
+    #     #include "../src/foo.hpp"
     target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
     target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
 
@@ -101,16 +101,16 @@ if (GTest_FOUND)
     set(COUNT_GTEST_FILES
         gtest/gtestmain.cpp
         gtest/count_gtests.cpp
-        src/letter_count.h
+        src/letter_count.hpp
     )
 
     include_directories(${GTEST_INCLUDE_DIRS})
     add_executable(${PROJECT_NAME} ${COUNT_GTEST_FILES})
     # This ensures that the cpp files in gtest/ can include headers from
     # src/ simply by doing
-    #     #include "foo.h"
+    #     #include "foo.hpp"
     # instead of having to write the cumbersome
-    #     #include "../src/foo.h"
+    #     #include "../src/foo.hpp"
     target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
     target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES})
 endif()
