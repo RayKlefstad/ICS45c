@@ -28,11 +28,11 @@ named `hw1` with the following structure:
 │   └── stack_gtests.cpp
 └── src
     ├── convert_knots.cpp
-    ├── convert_knots.h
+    ├── convert_knots.hpp
     ├── letter_count.cpp
-    ├── letter_count.h
+    ├── letter_count.hpp
     ├── stack.cpp
-    └── stack.h
+    └── stack.hpp
 ```
 
 You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
@@ -55,7 +55,7 @@ the project. To produce the build files for our project we run the first command
 
 ```bash
 # Build Generator Command
-cmake --preset deafult # Create a folder named `build` and run `CMake` to produce build files there
+cmake --preset default # Create a folder named `build` and run `CMake` to produce build files there
 ```
 
 This command should only need to be run once! If you change `CMakeLists.txt` or add new files, you will need to run
@@ -99,9 +99,9 @@ NOTE: If you build all targets with the `cmake --build build` command, you DO NO
 run the individual commands. The advantage of running the individual build commands is
 being able to build only the parts you want to test. Also, unlike the Build Generator 
 Command (`cmake --preset default`), you will need to run the Target Build Command 
-(`cmake --build build <--target target>`) every time you make changes to your `*.cpp` or `*.h`
+(`cmake --build build <--target target>`) every time you make changes to your `*.cpp` or `*.hpp`
 files. For example, if you build `knot_gtests.cpp`, and find out that your conversion does
-not work for numbers above `10`, you will need to change `convert_knots.h`. Once you have
+not work for numbers above `10`, you will need to change `convert_knots.hpp`. Once you have
 changed it, when you want to test it again, you can run:
 
 ```bash
@@ -130,10 +130,7 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 ## Submission
 
 All submissions will be done through [Gradescope](https://www.gradescope.com/). Open the Gradescope page
-and select `HW1`. Now if you are using a `GitHub` account, follow the [GitHub Submission](#github-submission)
-instructions, otherwise follow the [File Submission](#file-submission) instructions.
-
-### GitHub Submission
+and select `HW1`.
 
 First, we need to make sure that we commit all of our changes we made! In a terminal inside your project folder,
 run the following command:
@@ -145,7 +142,7 @@ git commit -a -m "Submission commit of HW1."
 Now that we have committed out changes, we need to push them to `GitHub` so that `Gradescope` can see them.
 
 ```bash
-git push
+git push -u my_repo
 ```
 
 Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
@@ -155,13 +152,3 @@ as shown below:
 
 Now the autograder will run and give you a score!
 
-### File Submission
-
-On `Gradescope`, press the `submit` button and it will bring up the following window:
-
-![](docs/submit_files.png)
-
-Then you will drag and drop the `convert_knots.h`, `convert_knots.cpp`, `letter_count.h`,
-`letter_count.cpp`, `stack.h`, and `stack.cpp` files from your `src` folder
-(or wherever you have made this file) and press upload. As these are the only files we are changing (for the homework,
-not for testing), they should be the only files that you upload!
