@@ -146,8 +146,10 @@ git push -u my_repo
 This will set the default remote for this branch to `my_repo`. In particular, if you make any future changes and
 want to resubmit them, you can create another `commit` with `git commit -a -m "Fixed bug XZY"` followed by `git push`.
 
-Now on Gradescope, press the submit button, choose the `GitHub` option, and select your project and branch
-as shown below:
+Now on GradeScope, go to your Account Settings and link your GitHub account to GradeScope.
+
+Then on Gradescope, go to the Homework 0.2 Github assignment, press the submit button, choose the `GitHub` option, 
+and select your project and branch as shown below:
 
 ![](docs/submit_github.png)
 
