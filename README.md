@@ -56,10 +56,10 @@ you got from the green `Code` button above. Example below:
 
 ![](docs/clone_link.png)
 
-And then in the terminal, type:
+So in this case you will have to run the command:
 
 ```bash
-git clone <YourLinkHere>
+git clone git@github.com:RayKlefstad/ICS45c.git
 ```
 
 This will add the folder `ICS45c` to your current working directory, which you can see by
@@ -79,6 +79,8 @@ copy-pasted link:
 ```bash
 git remote add my_repo <YourLinkHere>
 ```
+
+**Make sure that this link starts with `git@` and not with `https://` otherwise it will not work!**
 
 Your repository should now be set up correctly. To verify that it works, you can use the command:
 
