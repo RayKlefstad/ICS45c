@@ -1,4 +1,4 @@
-# ICS 45C:
+# ICS 45C
 
 Welcome to the ICS 45C GitHub landing page! This GitHub project will contain all of the project
 setup material you need for this class. This `main` branch will introduce the tools we will be
