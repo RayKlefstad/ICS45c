@@ -6,7 +6,14 @@ Welcome to ICS 45C Homework 1! These instructions will continue to help you use
 
 ## Getting Started
 
-To get started with Homework 1, you will need to `checkout` this Homework 1 branch.
+To get started with Homework 1, you will need to `checkout` this Homework 1 branch. First,
+make sure you're up to date with our repository by running:
+
+```bash
+git fetch --all
+```
+
+Then you can check out the homework 1 branch with:
 
 ```bash
 # Checkout hw1
@@ -14,7 +21,7 @@ git checkout hw1
 ```
 
 If you accidentally (or intentionally) checked out this branch before the official release of the homework,
-you may have an old version. So just to be safe, you can pull the most recent version with:
+you may have an old version. In that case, you can pull the most recent version with:
 
 ```bash
 git pull
