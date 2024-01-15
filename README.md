@@ -13,6 +13,13 @@ To get started with Homework 1, you will need to `checkout` this Homework 1 bran
 git checkout hw1
 ```
 
+If you accidentally (or intentionally) checked out this branch before the official release of the homework,
+you may have an old version. So just to be safe, you can pull the most recent version with:
+
+```bash
+git pull
+```
+
 ## Directory Structure
 
 ```bash
