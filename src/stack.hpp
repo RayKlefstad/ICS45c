@@ -23,16 +23,6 @@ public:
         }
     }
 
-    bool isEmpty()
-    {
-        bool isEmpty = myStack.empty();
-        if (isEmpty != 0)
-        {
-            return true;
-        }
-        return false;
-    }
-
     char pop()
     {
         if (!isEmpty())
@@ -52,6 +42,16 @@ public:
             return topChar;
         }
         return '@';
+    }
+
+    bool isEmpty()
+    {
+        bool isEmpty = myStack.empty();
+        if (isEmpty != 0)
+        {
+            return true;
+        }
+        return false;
     }
     
     bool isFull()
