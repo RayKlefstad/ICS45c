@@ -22,8 +22,14 @@
  void count(string s, int counts[])
  {
     for (char c : s)
-    { 
-        counts[char_to_index(c)]++;
+    {
+        if (tolower(c) >= 'a' && tolower(c) <= 'z')
+        {
+            counts[char_to_index(c)]++;
+        } else
+        {
+            continue;
+        }
     }
  }
 
