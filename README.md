@@ -38,6 +38,7 @@ rm -R build
     ├── coins_menu.cpp
     ├── coins_simple.cpp
     ├── coins_transfer.cpp
+    ├── student_gtests.cpp
     ├── word_count.cpp
     ├── word_count.hpp
     └── word_count_main.cpp
@@ -64,6 +65,9 @@ cmake --build build --target coins_transfer
 # Build only coins gtests:
 cmake --build build --target coins_gtests
 
+# Build student gtests
+cmake --build build --target student_gtests
+
 # Build only word_count_main.cpp:
 cmake --build build --target word_count
 
@@ -78,6 +82,7 @@ To run the above targets after compiling them:
 ./build/coins_menu          # Runs the 'main' function from src/coins_menu.cpp
 ./build/coins_transfer      # Runs the 'main' function from src/coins_transfer.cpp
 ./build/word_count          # Runs the 'main' function from src/word_count_main.cpp
+./build/student_gtests      # Runs the 'word_count' gtests that will be graded
 ./build/coins_gtests        # Runs the 'coins' gtest set of tests
 ./build/word_count_gtests   # Runs the 'word_count' gtests
 ```
