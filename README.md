@@ -1,7 +1,6 @@
 # ICS 45C: Homework 2 
 
 Welcome to ICS 45C Homework 2! Instructions from this point on will assume the use of `GitHub`.
-If you are working without github, then copy the [Directory Structure](#directory-structure).
 
 ## Getting Started
 
@@ -9,14 +8,21 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Fetch the most recent status from our repo
+git fetch --all
+
 # Checkout hw2 from the public branch:
 git checkout hw2
 ```
 
-## Directory Structure
+It is also advisable to delete the build folder from your previous homework when you checkout a new
+homework:
 
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw2` with the following structure:
+```bash
+rm -R build
+```
+
+## Directory Structure
 
 ```bash
 .
@@ -28,17 +34,14 @@ named `hw2` with the following structure:
 │   └── word_count_gtests.cpp
 └── src
     ├── coins.cpp
-    ├── coins.h
+    ├── coins.hpp
     ├── coins_menu.cpp
     ├── coins_simple.cpp
     ├── coins_transfer.cpp
     ├── word_count.cpp
-    ├── word_count.h
+    ├── word_count.hpp
     └── word_count_main.cpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -84,7 +87,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw2` branch to `Gradescope`. Or, you can
-upload files directly, namely: `coins.cpp`, `coins.h`, `coins_menu.cpp`, `coins_simple.cpp`, `coins_transfer.cpp`,
-`word_count.cpp`, `word_count.h`, and `word_count_main.cpp`.
+As with previous submissions, you can submit via `GitHub` by `git commit` and `git push` your
+changes to your private repository, and then submitting the `hw2` branch to `Gradescope`.

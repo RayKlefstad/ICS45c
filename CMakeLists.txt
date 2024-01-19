@@ -8,13 +8,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(WORD_COUNT_SRC_FILES
   src/word_count.cpp
-  src/word_count.h
+  src/word_count.hpp
 )
 add_executable(word_count ${WORD_COUNT_SRC_FILES} src/word_count_main.cpp)
 
 set(COINS_SRC_FILES
   src/coins.cpp
-  src/coins.h
+  src/coins.hpp
 )
 add_executable(coins_simple ${COINS_SRC_FILES} src/coins_simple.cpp)
 add_executable(coins_menu ${COINS_SRC_FILES} src/coins_menu.cpp)
