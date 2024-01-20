@@ -38,7 +38,7 @@ if (GTest_FOUND)
   target_include_directories(coins_gtests PRIVATE src ${GTEST_INCLUDE_DIRS})
   target_link_libraries(coins_gtests PRIVATE ${GTEST_LIBRARIES})
 
-  add_executable(student_gtests gtest/gtestmain.cpp ${WORD_COUNT_TEST_FILES} src/student_gtests.cpp)
+  add_executable(student_gtests gtest/gtestmain.cpp ${WORD_COUNT_SRC_FILES} src/student_gtests.cpp)
   target_include_directories(student_gtests PRIVATE src ${GTEST_INCLUDE_DIRS})
   target_link_libraries(student_gtests PRIVATE ${GTEST_LIBRARIES})
 endif()
