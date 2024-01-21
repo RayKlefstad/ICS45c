@@ -19,7 +19,7 @@ It is also advisable to delete the build folder from your previous homework when
 homework:
 
 ```bash
-rm -R build
+rm -Rf build
 ```
 
 ## Directory Structure
