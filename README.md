@@ -1,22 +1,19 @@
 # ICS 45C: Homework 3 
 
-Welcome to ICS 45C Homework 3! Instructions from this point on will assume the use of `GitHub`.
-If you are working without github, then copy the [Directory Structure](#directory-structure).
-
 ## Getting Started
 
 ```bash
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Get the most recent state of our code
+git fetch --all
+
 # Checkout hw3 from the public branch:
 git checkout hw3
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw3` with the following structure:
 
 ```bash
 .
@@ -33,9 +30,6 @@ named `hw3` with the following structure:
     ├── string.cpp
     └── string.hpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -73,6 +67,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw3` branch to `Gradescope`. Or, you can
-upload files directly, namely: `string.cpp`, `string.hpp`, `standard_main.cpp`, and `student_gtests.cpp`.
+As with previous submissions, you should submit via `GitHub` by `git commit` and `git push` your
+changes to your private repository, and then submitting the `hw3` branch to `Gradescope`.
