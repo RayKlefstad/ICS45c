@@ -10,14 +10,14 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Fetch the most recent updates from our repo
+git fetch --all
+
 # Checkout hw4 from the public branch:
 git checkout hw4
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw4` with the following structure:
 
 ```bash
 .
@@ -36,9 +36,6 @@ named `hw4` with the following structure:
     ├── string.cpp
     └── string.hpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -79,7 +76,7 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw4` branch to `Gradescope`. Or, you can
-upload files directly, namely: `alloc.hpp`, `alloc.cpp`, `string.cpp`, `string.hpp`, `standard_main.cpp`,
-and `student_gtests.cpp`.
+As with previous submissions, you can submit via `GitHub` by `git commit` and `git push` your
+changes to your private repository, and then submitting the `hw4` branch to `Gradescope`. Remember
+that on the first push that you do, you have to do `git push -u my_repo` so that your private repo
+becomes the default upstream.
