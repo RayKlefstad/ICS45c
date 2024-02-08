@@ -1,7 +1,6 @@
 # ICS 45C: Homework 5 
 
-Welcome to ICS 45C Homework 5! Instructions from this point on will assume the use of `GitHub`.
-If you are working without github, then copy the [Directory Structure](#directory-structure).
+Welcome to ICS 45C Homework 5!
 
 ## Getting Started
 
@@ -9,14 +8,14 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Get the newest version from our repository
+git fetch --all
+
 # Checkout hw5 from the public branch:
 git checkout hw5
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw5` with the following structure:
 
 ```bash
 .
@@ -35,9 +34,6 @@ named `hw5` with the following structure:
     ├── string.cpp
     └── string.hpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -98,7 +94,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw5` branch to `Gradescope`. Or, you can
-upload files directly, namely: `alloc.hpp`, `alloc.cpp`, `list.hpp`, `list.cpp`, `string.cpp`,
-`string.hpp`, `standard_main.cpp`, and `student_gtests.cpp`.
+As with previous submissions, you can either via `GitHub` by `git commit` and `git push -u my_repo`
+your changes to your private repository, and then submitting the `hw5` branch to `Gradescope`.
