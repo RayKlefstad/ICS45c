@@ -61,7 +61,7 @@ public:
     void print(std::ostream &out) const;
 
     // read next word into this string
-    // hint: use operator >> to read from in into buf
+    // hint: use operator >> to read from in into a temporary buffer
     void read(std::istream &in);
 
     // destructor for this string
