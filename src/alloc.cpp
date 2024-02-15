@@ -145,6 +145,36 @@ void* operator new[](std::size_t size) {
     throw std::bad_alloc{};
 }
 
+void* operator new(std::size_t size, std::nothrow_t const&) noexcept {
+    if (size == 0) {
+        ++size;
+    }
+
+    if (void* ptr = std::malloc(size)) {
+        for (AllocationTracker::State* tracker : trackers) {
+            tracker->add_allocation(ptr, size, AllocationType::Single);
+        }
+        return ptr;
+    }
+
+    return nullptr;
+}
+
+void* operator new[](std::size_t size, std::nothrow_t const&) noexcept {
+    if (size == 0) {
+        ++size;
+    }
+
+    if (void* ptr = std::malloc(size)) {
+        for (AllocationTracker::State* tracker : trackers) {
+            tracker->add_allocation(ptr, size, AllocationType::Array);
+        }
+        return ptr;
+    }
+
+    return nullptr;
+}
+
 void operator delete(void* ptr) noexcept {
     if (!ptr) {
         return;
