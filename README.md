@@ -1,7 +1,6 @@
 # ICS 45C: Homework 6 
 
-Welcome to ICS 45C Homework 6! Instructions from this point on will assume the use of `GitHub`.
-If you are working without github, then copy the [Directory Structure](#directory-structure).
+Welcome to ICS 45C Homework 6!
 
 ## Getting Started
 
@@ -9,14 +8,14 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Fetch the most recent changes
+git fetch --all
+
 # Checkout hw6 from the public branch:
 git checkout hw6
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw6` with the following structure:
 
 ```bash
 .
@@ -43,9 +42,6 @@ named `hw6` with the following structure:
     ├── triangle.cpp
     └── triangle.hpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -107,8 +103,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw6` branch to `Gradescope`. Or, you can
-upload files directly, namely: `alloc<.hpp/.cpp>`, `circle<.hpp/.cpp>`, `picture<.hpp/.cpp>`,
-`rectangle<.hpp/.cpp>`, `shape<.hpp/.cpp>`, `square<.hpp/.cpp>`, `triangle<.hpp/.cpp>`,
-and `standard_main.cpp`.
+As with previous submissions, you can submit via `GitHub` by `git commit` and `git push -u my_repo` your
+changes to your private repository, and then submitting the `hw6` branch to `Gradescope`.
