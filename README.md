@@ -1,7 +1,6 @@
 # ICS 45C: Homework 7
 
-Welcome to ICS 45C Homework 7! Instructions from this point on will assume the use of `GitHub`.
-If you are working without github, then copy the [Directory Structure](#directory-structure).
+Welcome to ICS 45C Homework 7!
 
 ## Getting Started
 
@@ -9,14 +8,14 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Get our most recent version
+git fetch --all
+
 # Checkout hw7 from the public branch:
 git checkout hw7
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw7` with the following structure:
 
 ```bash
 .
@@ -35,9 +34,6 @@ named `hw7` with the following structure:
     ├── matrix.hpp
     └── standard_main.cpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -102,7 +98,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw7` branch to `Gradescope`. Or, you can
-upload files directly, namely: `alloc<.hpp/.cpp>`, `array.hpp`, `int_array.hpp`,
-`matrix.hpp`, and `standard_main.cpp`.
+As with previous submissions, you can submit via `GitHub` by `git commit` and `git push -u my_repo` your
+changes to your private repository, and then submitting the `hw7` branch to `Gradescope`.
