@@ -1,7 +1,6 @@
 # ICS 45C: Homework 9
 
-Welcome to ICS 45C Homework 9! Instructions from this point on will assume the use of `GitHub`.
-If you are working without github, then copy the [Directory Structure](#directory-structure).
+Welcome to ICS 45C Homework 9!
 
 ## Getting Started
 
@@ -9,14 +8,14 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Fetch the most recent version
+git fetch --all
+
 # Checkout hw9 from the public branch:
 git checkout hw9
 ```
 
 ## Directory Structure
-
-If you are not using `GitHub`, and want to use our testing framework, you will need to make a folder
-named `hw9` with the following structure:
 
 ```bash
 .
@@ -31,9 +30,6 @@ named `hw9` with the following structure:
     ├── mapset_main.cpp
     └── set_list.hpp
 ```
-
-You should copy everything from the `CMakeLists.txt` and `CMakePresets.json` files into your own,
-as well as the files `gtestmain.cpp` and the individual `gtests`.
 
 ## Build Instructions
 
@@ -67,6 +63,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can either submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw9` branch to `Gradescope`. Or, you can
-upload files directly, everything listed in the `src` folder above.
+As with previous submissions, you can submit via `GitHub` by `git commit` and `git push -u my_repo`
+your changes to your private repository, and then submitting the `hw9` branch to `Gradescope`.
