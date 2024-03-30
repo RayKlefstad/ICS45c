@@ -44,11 +44,11 @@ First, generate an SSH key pair for GitHub on Openlab through the following step
 
 - [ ] Type or copy the following command, using your GitHub email:
 ```shell
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "<YourGitHubEmailHere>"
 ```
 When you're prompted to `Enter a file in which to save the key`,  press **`Enter`** to accept the default file location.
 
-- [ ] At the next prompt, hit **`Enter`** (twice) for no passphrase.
+- [ ] At the next prompt, you can enter a passphrase to protect your SSH key or simply hit **`Enter`** (twice) for no passphrase.
     
  ``` bash
 $ Enter passphrase (empty for no passphrase): [Type a passphrase]
@@ -107,7 +107,7 @@ git remote add my_repo <git@YourSSHLinkHere>
 
 :warning: **Make sure that this link starts with `git@` and not with `https://` or it will not work!**
 
-The command above establishes a second `remote` connection to your private repository on GitHub, and creates an alias (short nickname) `my-repo` so that you don't have to type that long connection link every time.
+The command above establishes a second `remote` connection to your private repository on GitHub, and creates an alias (short nickname) `my_repo` so that you don't have to type that long connection link every time.
 
 Your private repository should now be set up correctly! To verify that it works, you can use the command:
 
