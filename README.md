@@ -95,7 +95,9 @@ To create your private copy , be sure you are in your own GitHub account, then c
 
 ![](docs/new_repository.png)
 
-Give your GitHub repository a name such as `ICS45c` and **make sure you set the visibility to private**! 
+Give your GitHub repository a name such as `ICS45c`, and **make sure you set the visibility to private**!
+
+⚠️ **Making your repository visibility public is a violation of academic integrity policy, allowing others to view and copy your code.** Be SURE at this stage that your repository visibility is private and remains so at all times.
 
 ## 5 Set up private `remote` and `push`
 
