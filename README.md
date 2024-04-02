@@ -7,15 +7,11 @@ main.cpp
 ```
 by following all the steps below. 
 
-❓== what about hw_gtests?==
-
 ## Getting Started
 
 To get started with this Homework 0.2, be sure that you have followed all of the instructions in the `main` branch README, and have cloned the public course repository to your own private one on Openlab (and pushed to your own private GitHub repository).
 
 Now, log in to Openlab, and move into the directory you created for this course:
-
-❗=COMMENT: I think that git clone previously created the directory ICS45c, so I find it confusing to now call it a "project folder" and not specify it by the same name here. I used the term "course directory" consistently.==
 
 ```bash
 # Move into the course directory, i.e., your ICS45c directory on Openlab
@@ -24,8 +20,6 @@ cd ICS45c
 # Change to the current homework branch:
 git checkout hw0
 ```
-
-❓==do they need to fetch first? or is that only if they checked out too early, before changes were made? (post 387)==
 
 ## Directory Structure
 
@@ -40,14 +34,14 @@ Our testing framework has the following structure in `hw0`:
 └── src
     └── main.cpp
 ```
-Note that the files with your code are in the subdirectory `src`, and the files with your tests are in the subdirectory `gtest`. To edit the files, you must specify their path, e.g. 
+Note that the files with your code are in the subdirectory `src`, and the files with your tests are in the subdirectory `gtest`. To edit the files, you **must specify their path**, e.g. 
 ```
 vim src/main.cpp
 vim src/hw_gtests.cpp
 ```
 If you move into `src` before editing `main.cpp`, you must remember to move back up into `ICS45c` before using the `git` commands. We recommend and give examples below of typing the subdirectory paths instead. 
 
-*TIP: You can use tab completion of directory and filenames to reduce typing.*
+*TIP: Use tab completion of directory and filenames to reduce typing.*
 
 ## Coding
 
@@ -85,8 +79,6 @@ cmake --build build     # Will build all of the `targets` described in the `CMak
 
 These commands will produce a folder named `build`, which will have two new executables you can run! 
 
-❓ ==TWO new executables??==
-
 First, we will run your code you just wrote:
 
 ```bash
@@ -102,9 +94,8 @@ Hello World!
 Next, we will run `GTest`. This procedure will run tests on your code and is the same way we will grade your homework assignments.
 
 ```bash
-./build/hw_gtests    # Runs the tests you wrote in `gtest/hw_gtests.cpp`
+./build/hw_gtests    # Runs the tests in `gtest/hw_gtests.cpp`
 ```
-❓ ==tests you wrote is confusing, because we didn't have any instructions how to write tests and don't know how for hw0==
 
 This command should output:
 
@@ -129,15 +120,13 @@ Next, we need to make sure that we `commit` all of our changes we made! In your 
 git commit -a -m "Submission commit of HW0."
 ```
 
-Now that we have committed our changes, we need to `push` them to `GitHub` so that `GradeScope` can upload them.  Your
-Openlab repository should have two remotes: `origin` which represents the GitHub repository at `RayKlefstad/ICS45c` and `my_repo` which represents your own private GitHub repository. To push to *your* GitHub repository, use the command:
+Now that we have committed our changes, we need to `push` them to `GitHub` so that `GradeScope` can upload them. Your Openlab repository should have two remotes: `origin` which represents the public GitHub repository at `RayKlefstad/ICS45c` and `my_repo` which represents your own private GitHub repository for your own code. To push to *your* GitHub repository, use the command:
 
 ```bash
 git push -u my_repo
 ```
 
-This command will set the default remote for this branch to `my_repo`. If you make any future changes and
-want to resubmit them, you can create another `commit` with `git commit -a -m "Fixed bug XZY"` followed by `git push`.
+This command will set the default remote for this branch to `my_repo`. If you make any future changes and want to resubmit them, you can create another `commit` with `git commit -a -m "Fixed bug XZY"` followed by `git push`.
 
 Congratulations! You are now ready to [submit](#submission) your homework!
 
@@ -150,7 +139,5 @@ On GradeScope, go into your **Account Settings** and **link your GitHub account 
 Then on the course GradeScope, go to the `Homework 0.2 Github` assignment, press the `Submit` button, choose the `GitHub` option,  and select your project and branch as shown below:
 
 ![](docs/submit_github.png)
-
-pic
 
 Now the autograder will run and give you a score!
