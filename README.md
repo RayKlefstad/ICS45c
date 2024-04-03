@@ -97,7 +97,7 @@ To create your private copy , be sure you are in your own GitHub account, then c
 
 Give your GitHub repository a name such as `ICS45c`, and **make sure you set the visibility to private**!
 
-⚠️ **Making your repository visibility public is a violation of academic integrity policy, allowing others to view and copy your code.** Be SURE at this stage that your repository visibility is private and remains so at all times.
+⚠️ **Making your repository visibility public is a violation of academic integrity policy, allowing others to view and copy your code.** Be SURE at this stage that your repository visibility is private and remains so at all times, including after the course is over.
 
 ## 5 Set up private `remote` and `push`
 
@@ -146,9 +146,7 @@ Testing your programs before submitting them is **essential** and will be **requ
 
 Next, at the upper left of this page, select the `hw0` branch, and follow the instructions in the README there.
 
-![](docs/branches.png)
-
-<TODO: new pic showing hw0 branch>
+![](docs/change_branch.png)
 
 To access instructions and files for all **future** Homeworks, use that same branch drop down menu at the top of this page (the public ICS45c GitHub) to select the Homework you wish to work on, **but ONLY AFTER they are announced as available on Ed**.Then follow the instructions on the README for that homework branch.
 
