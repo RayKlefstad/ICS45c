@@ -148,7 +148,7 @@ Testing your programs before submitting them is **essential** and will be **requ
 
 Next, at the upper left of this page, select the `hw0` branch, and follow the instructions in the README there.
 
-![](docs/change_branch.png)
+![](docs/45C_change_branch2.png)
 
 To access instructions and files for all **future** Homeworks, use that same branch drop down menu at the top of this page (the public ICS45c GitHub) to select the Homework you wish to work on, **but ONLY AFTER they are announced as available on Ed**.Then follow the instructions on the README for that homework branch.
 
