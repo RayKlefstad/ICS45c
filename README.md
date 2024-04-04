@@ -21,6 +21,8 @@ This class **requires** the use of a GitHub account, so first create your accoun
 
 ## 2 Configure your `git` profile and add SSH keys
 
+_Note: If you have already set up SSH keys on Openlab for your GitHub account, for example in a previous ICS 45C, skip Step 2 and go on to [Step 3](clone-this-repository)._
+
 On Openlab, `git` is pre-installed, so now we will set up your basic `git` profile and add your GitHub `ssh-keys` to your account! SSH keys allow secure communication between your Openlab and your GitHub accounts, without the need to log in every time.
 
 ### Configure `git` profile
@@ -70,7 +72,7 @@ Now that you have created your SSH key on Openlab, add it to **your** `GitHub` a
 - [ ] In the **Key** field, paste your public key.
 - [ ] Click  **Add SSH key**.
 
-## 3 Clone this repository
+## 3 [Clone this repository](clone-this-repository)
 
 Now that you have set up your `username`, `email`, and `ssh` key, [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this public ICS45c repository to your Openlab. On Openlab, you can clone a GitHub repository by using the command `git clone` and copy-pasting the **SSH link** you get when clicking the green `Code` button. Example below:
 
