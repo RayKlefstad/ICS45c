@@ -15,13 +15,6 @@ git fetch --all
 git checkout hw2
 ```
 
-It is also advisable to delete the build folder from your previous homework when you checkout a new
-homework:
-
-```bash
-rm -Rf build
-```
-
 ## Directory Structure
 
 ```bash
