@@ -85,5 +85,5 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can submit via `GitHub` by `git commit` and `git push` your
-changes to your private repository, and then submitting the `hw2` branch to `Gradescope`.
+As with previous submissions, you can submit via `GitHub` by `git commit` and `git push -u my_repo`
+your changes to your private repository, and then submitting the `hw2` branch to `Gradescope`.
