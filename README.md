@@ -9,6 +9,9 @@ If you are working without github, then copy the [Directory Structure](#director
 # Move into your personal private repository folder:
 cd <PrivateRepositoryFolder>
 
+# Get the data from our repo
+git fetch --all
+
 # Checkout hw8 from the public branch:
 git checkout hw8
 ```
